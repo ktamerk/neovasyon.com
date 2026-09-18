@@ -43,11 +43,12 @@
     <a class="logo" href="/">Neovasyon <span>IDEATHON 2026</span></a>
 
     <nav class="nav" aria-label="Ana menü">
-      <a href="#nedir">Ideathon Nedir?</a>
+      <a href="#nedir">Nedir?</a>
       <a href="#kimler">Kimler Başvurabilir?</a>
+      <a href="#odul">Ödüller</a>
       <a href="#temalar">Temalar</a>
       <a href="#surec">Süreç</a>
-      <a href="#odul">Ödüller</a>
+      <a href="#juri">Jüri</a>
       <a href="#sss">SSS</a>
     </nav>
 
@@ -65,11 +66,12 @@
       <div class="menu__panel">
         <a href="#nedir">Ideathon Nedir?</a>
         <a href="#kimler">Kimler Başvurabilir?</a>
+        <a href="#odul">Ödüller</a>
         <a href="#temalar">Temalar</a>
         <a href="#surec">Süreç</a>
         <a href="#kriterler">Değerlendirme</a>
+        <a href="#juri">Jüri</a>
         <a href="#gecmis">Geçmiş Ideathon'lar</a>
-        <a href="#odul">Ödüller</a>
         <a href="#sss">SSS</a>
         <a class="btn btn--primary" href="/basvuru.html"
            data-track="apply_button_click" data-track-location="mobile_menu">Hemen Başvur</a>
@@ -268,7 +270,49 @@
     </div>
   </section>
 
-  <!-- ===================== 4. TEMALAR ===================== -->
+  <!-- ===================== 4. ÖDÜLLER (öne çıkarıldı) ===================== -->
+  <section class="prize-band" id="odul">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Ödüller</p>
+        <h2>Neler kazanabilirsin?</h2>
+        <p>Dereceye giren üç takım ödüllendirilir.</p>
+      </div>
+
+      <div class="podium">
+        <div class="podium__item podium__item--1">
+          <div class="podium__medal" aria-hidden="true">🥇</div>
+          <div class="podium__rank">Birinci Takım</div>
+          <div class="podium__amount" data-cfg="prizes.items.0.amount"></div>
+        </div>
+        <div class="podium__item">
+          <div class="podium__medal" aria-hidden="true">🥈</div>
+          <div class="podium__rank">İkinci Takım</div>
+          <div class="podium__amount" data-cfg="prizes.items.1.amount"></div>
+        </div>
+        <div class="podium__item">
+          <div class="podium__medal" aria-hidden="true">🥉</div>
+          <div class="podium__rank">Üçüncü Takım</div>
+          <div class="podium__amount" data-cfg="prizes.items.2.amount"></div>
+        </div>
+      </div>
+
+      <h3 style="color:#fff;font-size:var(--step-1);margin-bottom:.6rem">Ödülün ötesinde</h3>
+      <ul class="perk-list">
+        <li>Neova MT ve Kampüs programlarında değerlendirilme fırsatı</li>
+        <li>Mentorlarla birebir çalışma</li>
+        <li>Sektör profesyonelleriyle network</li>
+        <li>Jüriden doğrudan geri bildirim</li>
+      </ul>
+
+      <p style="color:#8fb3a7;font-size:var(--step--1);margin-top:1.25rem;margin-bottom:0">
+        2026 ödül tutarları teyit edildiğinde <code>assets/js/config.js › prizes</code>
+        alanından güncellenir. Geçmiş yıl rakamları buraya taşınmamıştır.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== 5. TEMALAR ===================== -->
   <section class="section" id="temalar">
     <div class="wrap">
       <div class="section__head">
@@ -287,46 +331,46 @@
       </p>
 
       <div class="grid grid--4">
-        <div class="card card--hover theme-card" data-theme-name="Yapay Zekâ">
-          <div class="card__icon" aria-hidden="true">🤖</div>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Yapay Zekâ">
+          <div class="bubble__icon" aria-hidden="true">🤖</div>
           <h3>Yapay Zekâ</h3>
-          <p class="card__note">Sigortacılıkta yapay zekâ destekli süreçler, otomasyon ve karar destek.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Yeni Nesil Sigorta Ürünleri">
-          <div class="card__icon" aria-hidden="true">🧩</div>
+          <p>Sigortacılıkta yapay zekâ destekli süreçler, otomasyon ve karar destek.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Yeni Nesil Sigorta Ürünleri">
+          <div class="bubble__icon" aria-hidden="true">🧩</div>
           <h3>Yeni Nesil Sigorta Ürünleri</h3>
-          <p class="card__note">Değişen ihtiyaçlara göre kurgulanmış, esnek ve modüler ürün fikirleri.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Müşteri Deneyimi">
-          <div class="card__icon" aria-hidden="true">💬</div>
+          <p>Değişen ihtiyaçlara göre kurgulanmış, esnek ve modüler ürün fikirleri.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Müşteri Deneyimi">
+          <div class="bubble__icon" aria-hidden="true">💬</div>
           <h3>Müşteri Deneyimi</h3>
-          <p class="card__note">Poliçeden hasara kadar tüm yolculuğu daha basit ve şeffaf hale getirmek.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Hasar ve Risk Yönetimi">
-          <div class="card__icon" aria-hidden="true">🛡️</div>
+          <p>Poliçeden hasara kadar tüm yolculuğu daha basit ve şeffaf hale getirmek.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Hasar ve Risk Yönetimi">
+          <div class="bubble__icon" aria-hidden="true">🛡️</div>
           <h3>Hasar ve Risk Yönetimi</h3>
-          <p class="card__note">Hasar süreçlerini hızlandıran, riski daha iyi ölçen çözümler.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Dijital Dağıtım Kanalları">
-          <div class="card__icon" aria-hidden="true">📱</div>
+          <p>Hasar süreçlerini hızlandıran, riski daha iyi ölçen çözümler.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Dijital Dağıtım Kanalları">
+          <div class="bubble__icon" aria-hidden="true">📱</div>
           <h3>Dijital Dağıtım Kanalları</h3>
-          <p class="card__note">Sigortaya erişimi kolaylaştıran yeni dijital kanallar ve iş modelleri.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Sürdürülebilirlik">
-          <div class="card__icon" aria-hidden="true">🌱</div>
+          <p>Sigortaya erişimi kolaylaştıran yeni dijital kanallar ve iş modelleri.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Sürdürülebilirlik">
+          <div class="bubble__icon" aria-hidden="true">🌱</div>
           <h3>Sürdürülebilirlik</h3>
-          <p class="card__note">Çevresel ve sosyal etkiyi gözeten, uzun vadeli değer üreten fikirler.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Veri ve Analitik">
-          <div class="card__icon" aria-hidden="true">📊</div>
+          <p>Çevresel ve sosyal etkiyi gözeten, uzun vadeli değer üreten fikirler.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Veri ve Analitik">
+          <div class="bubble__icon" aria-hidden="true">📊</div>
           <h3>Veri ve Analitik</h3>
-          <p class="card__note">Veriyi anlamlı içgörüye çeviren modeller ve analitik yaklaşımlar.</p>
-        </div>
-        <div class="card card--hover theme-card" data-theme-name="Serbest Alan">
-          <div class="card__icon" aria-hidden="true">✨</div>
+          <p>Veriyi anlamlı içgörüye çeviren modeller ve analitik yaklaşımlar.</p>
+        </button>
+        <button type="button" class="bubble bubble--hover" data-theme-name="Serbest Alan">
+          <div class="bubble__icon" aria-hidden="true">✨</div>
           <h3>Serbest Alan</h3>
-          <p class="card__note">Yukarıdakilere girmeyen ama sektöre değer katacağına inandığın her fikir.</p>
-        </div>
+          <p>Yukarıdakilere girmeyen ama sektöre değer katacağına inandığın her fikir.</p>
+        </button>
       </div>
 
       <p style="margin-top:1.25rem;font-weight:600;color:var(--brand-700)">
@@ -335,7 +379,7 @@
     </div>
   </section>
 
-  <!-- ===================== 5. SÜREÇ ===================== -->
+  <!-- ===================== 6. SÜREÇ ===================== -->
   <section class="section section--alt" id="surec">
     <div class="wrap">
       <div class="section__head">
@@ -387,7 +431,7 @@
     </div>
   </section>
 
-  <!-- ===================== 6. DEĞERLENDİRME KRİTERLERİ ===================== -->
+  <!-- ===================== 7. DEĞERLENDİRME KRİTERLERİ ===================== -->
   <section class="section" id="kriterler">
     <div class="wrap">
       <div class="section__head">
@@ -418,8 +462,68 @@
     </div>
   </section>
 
-  <!-- ===================== 7. NEDEN KATILMALIYIM? ===================== -->
-  <section class="section section--alt" id="neden">
+  <!-- ===================== 8. JÜRİ ===================== -->
+  <section class="section section--alt" id="juri">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Jüri</p>
+        <h2>Fikrini kim değerlendirecek?</h2>
+        <p>
+          Aşağıda <strong>2025 Neova Ideathon jürisinde yer alan</strong> isimler
+          bulunuyor. 2026 jürisi açıklandığında güncellenecektir.
+        </p>
+      </div>
+
+      <ul class="jury">
+        <li class="juror">
+          <div class="juror__avatar"><span class="juror__initials">AÇ</span></div>
+          <p class="juror__name">Aslıhan Çandır</p>
+          <p class="juror__role">Teknoloji ve İnovasyon'dan Sorumlu Genel Müdür Yardımcısı</p>
+          <p class="juror__org">Neova Sigorta</p>
+        </li>
+        <li class="juror">
+          <div class="juror__avatar"><span class="juror__initials">CÇ</span></div>
+          <p class="juror__name">Cem Salih Çelen</p>
+          <p class="juror__role">Teknik, Hasar ve Reasürans'tan Sorumlu Genel Müdür Yardımcısı</p>
+          <p class="juror__org">Neova Katılım Sigorta</p>
+        </li>
+        <li class="juror">
+          <div class="juror__avatar"><span class="juror__initials">SK</span></div>
+          <p class="juror__name">Sami Kaya</p>
+          <p class="juror__role">Dijital Kanallar, Dijital Pazarlama ve Bankasürans'tan Sorumlu Genel Müdür Yardımcısı</p>
+          <p class="juror__org">Neova Katılım Sigorta</p>
+        </li>
+        <li class="juror">
+          <div class="juror__avatar"><span class="juror__initials">FA</span></div>
+          <p class="juror__name">Prof. Dr. Fatih Alagöz</p>
+          <p class="juror__role">Öğretim Görevlisi</p>
+          <p class="juror__org">Boğaziçi Üniversitesi</p>
+        </li>
+        <li class="juror">
+          <div class="juror__avatar"><span class="juror__initials">SY</span></div>
+          <p class="juror__name">Prof. Dr. Selim Yazıcı</p>
+          <p class="juror__role">Öğretim Üyesi · Fintech İstanbul Kurucu Ortağı</p>
+          <p class="juror__org">İstanbul Üniversitesi</p>
+        </li>
+        <li class="juror">
+          <div class="juror__avatar"><span class="juror__initials">HÖ</span></div>
+          <p class="juror__name">Doç. Dr. Hakan Özcan</p>
+          <p class="juror__role">Öğretim Üyesi · GESİD Yönetim Kurulu Başkanı</p>
+          <p class="juror__org">Gelişim Üniversitesi</p>
+        </li>
+      </ul>
+
+      <p class="card__note" style="margin-top:2.5rem">
+        Jüri bilgileri 2025 etkinliğinin basın bültenlerinden alınmıştır ve
+        kurum içi kayıtlarla teyit edilmelidir. Jüri fotoğrafları
+        <span class="todo">TODO: Görsel gerekli</span> — geldiğinde baş harflerin
+        yerine <code>&lt;img&gt;</code> eklenmesi yeterlidir.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== 9. NEDEN KATILMALIYIM? ===================== -->
+  <section class="section" id="neden">
     <div class="wrap">
       <div class="section__head">
         <p class="eyebrow">Senin İçin</p>
@@ -427,33 +531,33 @@
       </div>
 
       <div class="grid grid--3">
-        <div class="card card--hover">
-          <div class="card__icon" aria-hidden="true">🧭</div>
+        <div class="bubble bubble--hover">
+          <div class="bubble__icon" aria-hidden="true">🧭</div>
           <h3>Mentorluk</h3>
           <p>Sektör profesyonellerinden doğrudan geri bildirim al.</p>
         </div>
-        <div class="card card--hover">
-          <div class="card__icon" aria-hidden="true">🎯</div>
+        <div class="bubble bubble--hover">
+          <div class="bubble__icon" aria-hidden="true">🎯</div>
           <h3>Gerçek Problem</h3>
           <p>Fikrini gerçek iş problemleri üzerinde geliştir.</p>
         </div>
-        <div class="card card--hover">
-          <div class="card__icon" aria-hidden="true">🤝</div>
+        <div class="bubble bubble--hover">
+          <div class="bubble__icon" aria-hidden="true">🤝</div>
           <h3>Network</h3>
           <p>Neova ve teknoloji ekosistemindeki profesyonellerle tanış.</p>
         </div>
-        <div class="card card--hover">
-          <div class="card__icon" aria-hidden="true">⚡</div>
+        <div class="bubble bubble--hover">
+          <div class="bubble__icon" aria-hidden="true">⚡</div>
           <h3>Deneyim</h3>
           <p>Kısa sürede fikir geliştirme ve pitch deneyimi kazan.</p>
         </div>
-        <div class="card card--hover">
-          <div class="card__icon" aria-hidden="true">🏆</div>
+        <div class="bubble bubble--hover">
+          <div class="bubble__icon" aria-hidden="true">🏆</div>
           <h3>Ödül</h3>
           <p>Kazanan takımlar için ödüller.</p>
         </div>
-        <div class="card card--hover">
-          <div class="card__icon" aria-hidden="true">🚀</div>
+        <div class="bubble bubble--hover">
+          <div class="bubble__icon" aria-hidden="true">🚀</div>
           <h3>Kariyer</h3>
           <p>Neova'nın MT ve Kampüs programlarında değerlendirilme fırsatı.</p>
           <p class="card__note">Koşulları teyit edilmeli: <span class="todo">TODO: İçerik gerekli</span></p>
@@ -462,8 +566,8 @@
     </div>
   </section>
 
-  <!-- ===================== 8. GEÇMİŞ IDEATHON'LAR ===================== -->
-  <section class="section" id="gecmis">
+  <!-- ===================== 10. GEÇMİŞ IDEATHON'LAR ===================== -->
+  <section class="section section--alt" id="gecmis">
     <div class="wrap">
       <div class="section__head">
         <p class="eyebrow">Sosyal Kanıt</p>
@@ -503,24 +607,13 @@
       </div>
 
       <h3 style="margin-top:2rem">Rakamlarla Neova Ideathon</h3>
-      <div class="grid grid--4" style="margin-top:.75rem">
-        <div class="card stat">
-          <span class="stat__num"><span class="todo">TODO</span></span>
-          <span class="stat__lbl">Toplam başvuru</span>
-        </div>
-        <div class="card stat">
-          <span class="stat__num"><span class="todo">TODO</span></span>
-          <span class="stat__lbl">Katılımcı</span>
-        </div>
-        <div class="card stat">
-          <span class="stat__num"><span class="todo">TODO</span></span>
-          <span class="stat__lbl">Finalist takım</span>
-        </div>
-        <div class="card stat">
-          <span class="stat__num"><span class="todo">TODO</span></span>
-          <span class="stat__lbl">Mentor</span>
-        </div>
-      </div>
+      <ul class="stat-bubbles" style="margin-top:.75rem">
+        <li class="stat-bubble"><b><span class="todo">TODO</span></b><span>Toplam başvuru</span></li>
+        <li class="stat-bubble"><b><span class="todo">TODO</span></b><span>Katılımcı</span></li>
+        <li class="stat-bubble"><b><span class="todo">TODO</span></b><span>Finalist takım</span></li>
+        <li class="stat-bubble"><b><span class="todo">TODO</span></b><span>Mentor</span></li>
+      </ul>
+
       <p class="card__note" style="margin-top:.6rem">
         Doğrulanmamış rakam kullanılmadı. Kurum içi kayıtlardan gelen sayılar
         girildiğinde bu kartlar dolacaktır.
@@ -536,49 +629,7 @@
     </div>
   </section>
 
-  <!-- ===================== 9. ÖDÜLLER ===================== -->
-  <section class="section section--alt" id="odul">
-    <div class="wrap">
-      <div class="section__head">
-        <p class="eyebrow">Ödüller</p>
-        <h2>Neler kazanabilirsin?</h2>
-      </div>
-
-      <div class="prizes">
-        <div class="prize prize--1">
-          <div class="prize__medal" aria-hidden="true">🥇</div>
-          <div class="prize__rank">Birinci Takım</div>
-          <div class="prize__amount" data-cfg="prizes.items.0.amount"></div>
-        </div>
-        <div class="prize">
-          <div class="prize__medal" aria-hidden="true">🥈</div>
-          <div class="prize__rank">İkinci Takım</div>
-          <div class="prize__amount" data-cfg="prizes.items.1.amount"></div>
-        </div>
-        <div class="prize">
-          <div class="prize__medal" aria-hidden="true">🥉</div>
-          <div class="prize__rank">Üçüncü Takım</div>
-          <div class="prize__amount" data-cfg="prizes.items.2.amount"></div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:1.25rem">
-        <h3>Ödülün ötesinde</h3>
-        <ul>
-          <li>Neova'nın MT ve Kampüs programlarında değerlendirilme fırsatı</li>
-          <li>Mentorlarla birebir çalışma ve sektör geri bildirimi</li>
-          <li>Sektör profesyonelleriyle network</li>
-        </ul>
-        <p class="card__note">
-          2026 ödül tutarları teyit edildiğinde
-          <code>assets/js/config.js › prizes</code> alanından güncellenir.
-          Geçmiş yıl rakamları buraya taşınmamıştır.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 10. SSS ===================== -->
+  <!-- ===================== 11. SSS ===================== -->
   <section class="section" id="sss">
     <div class="wrap">
       <div class="section__head">
@@ -716,8 +767,9 @@
         <ul>
           <li><a href="#nedir">Ideathon Nedir?</a></li>
           <li><a href="#kimler">Kimler Başvurabilir?</a></li>
-          <li><a href="#surec">Süreç</a></li>
           <li><a href="#odul">Ödüller</a></li>
+          <li><a href="#surec">Süreç</a></li>
+          <li><a href="#juri">Jüri</a></li>
           <li><a href="#sss">SSS</a></li>
         </ul>
       </div>

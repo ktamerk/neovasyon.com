@@ -29,8 +29,8 @@ node tests/e2e.js               # 52 kontrol
 ## Dosya yapısı
 
 ```
-index.html            Ana sayfa (hero → nedir → kimler → temalar → süreç →
-                      kriterler → neden → geçmiş → ödül → SSS → CTA)
+index.html            Ana sayfa (hero → nedir → kimler → ÖDÜL → temalar →
+                      süreç → kriterler → jüri → neden → geçmiş → SSS → CTA)
 basvuru.html          4 adımlı başvuru formu
 tesekkurler.html      Başvuru sonrası sayfa (noindex)
 kvkk.html             KVKK + şartname  ← metin hukuk ekibinden gelecek
@@ -153,6 +153,25 @@ açık `width`/`height` kullanılmalıdır (placeholder'lar bu ölçülerle işa
 > `Event` şemasındaki `offers` bloğu (başvuru linki + son başvuru tarihi)
 > bilinçli olarak yorumda bırakıldı — Google'a teyitsiz tarih vermemek için.
 > `application.deadline` doldurulunca `index.html` sonundaki yorum açılmalıdır.
+
+---
+
+## Tasarım kararları
+
+### Bölüm sırası
+
+Ödül bölümü bilinçli olarak **yukarı**, "kimler başvurabilir"in hemen ardına
+alındı: aday önce "uygun muyum?" sorusunun cevabını, hemen ardından "ne
+kazanırım?" cevabını görüyor. Koyu zeminli `.prize-band` olması hem vurguyu
+artırıyor hem de arka arkaya gelen açık renkli bölümleri bölüyor.
+
+### Kutu yerine balon
+
+Sayfanın tamamı dikdörtgen kart olmasın diye tema ve "neden katılmalısın"
+kartları `.bubble` (asimetrik köşeli, çerçevesiz), jüri `.juror` (daire),
+geçmiş etkinlik rakamları `.stat-bubble` (daire) olarak kurgulandı. Kutu
+görünümü yalnızca yapı gereken yerlerde korundu: form alanları, SSS accordion
+ve değerlendirme kriterleri.
 
 ---
 

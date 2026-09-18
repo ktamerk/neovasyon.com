@@ -76,6 +76,8 @@ Aşağıdaki soruların cevabı **bilinmiyor**, bu yüzden boş bırakıldı
 | 23 | **2024 kazanan takımlar + proje isimleri** | Bulunamadı |
 | 24 | **Etkinlik fotoğrafları** (min. 4 adet, WebP/AVIF, 1200×900) | Şu an placeholder |
 | 25 | **Katılımcı yorumları** (2–3 adet, isim + üniversite + foto) | |
+| 26 | **Jüri üyelerinin fotoğrafları** (kare, min. 400×400) | Şu an baş harfli daire; `<img>` eklemek yeterli |
+| 27 | **2026 jürisi** açıklandığında isim ve unvanlar | Şu an 2025 jürisi gösteriliyor |
 
 ### Teyit edilmesi gereken mevcut içerik
 
@@ -87,6 +89,14 @@ doğrulanmalıdır:
   3. *Parametrik Sigorta Platformu*.
 - **2024:** ödüller 50.000 / 30.000 / 20.000 TL.
 - Kazananların **Neova MT ve Kampüs programlarında** değerlendirilme fırsatı.
+- **2025 jürisi (6 kişi):** Aslıhan Çandır, Cem Salih Çelen, Sami Kaya,
+  Prof. Dr. Fatih Alagöz, Prof. Dr. Selim Yazıcı, Doç. Dr. Hakan Özcan.
+
+> ⚠️ Jüri konusunda dikkat: bazı haber kaynaklarında Uğur Gülen ve Zeynep
+> Türker'in de yer aldığı **farklı** bir jüri listesi geçiyor. O liste,
+> kazananları InoTespit / SureAI / NeoMate olan **daha önceki bir yıla** ait.
+> Sitede yalnızca 2025 jürisi gösteriliyor. Bu ayrım kurum içi kayıtlarla
+> teyit edilmelidir.
 
 > Yanlışsa `index.html #gecmis` ve `#odul` bölümlerinden düzeltilmelidir.
 
