@@ -65,32 +65,31 @@ Aşağıdaki soruların cevabı **bilinmiyor**, bu yüzden boş bırakıldı
 
 ---
 
-## 🟢 P3 — Sosyal kanıt (geçmiş etkinlikler)
+## 🟢 P3 — Sosyal kanıt (2025 vitrini)
+
+Sayfada artık **yalnızca 2025** gösteriliyor. "Rakamlarla Neova Ideathon"
+bölümü kaldırıldı, dolayısıyla başvuru/katılımcı/finalist sayıları artık
+gerekmiyor.
 
 | # | Bilgi | Not |
 |---|---|---|
-| 19 | 2024 ve 2025 **toplam başvuru sayısı** | Rakam uydurulmadı |
-| 20 | 2024 ve 2025 **katılımcı sayısı** | |
-| 21 | 2024 ve 2025 **finalist takım sayısı** | |
-| 22 | **Mentor sayısı** | |
-| 23 | **2024 kazanan takımlar + proje isimleri** | Bulunamadı |
-| 24 | **Etkinlik fotoğrafları** (min. 4 adet, WebP/AVIF, 1200×900) | Şu an placeholder |
-| 25 | **Katılımcı yorumları** (2–3 adet, isim + üniversite + foto) | |
-| 26 | **Jüri üyelerinin fotoğrafları** (kare, min. 400×400) | Şu an baş harfli daire; `<img>` eklemek yeterli |
-| 27 | **2026 jürisi** açıklandığında isim ve unvanlar | Şu an 2025 jürisi gösteriliyor |
+| 19 | **2025 etkinlik fotoğrafları** (min. 3 adet, WebP/AVIF, 1200×900) | Şu an placeholder |
+| 20 | **Katılımcı yorumu** (1–2 adet, isim + üniversite + foto) | Şu an placeholder |
+| 21 | **Jüri üyelerinin fotoğrafları** (kare, min. 400×400) | Baş harfli daire; `<img>` eklemek yeterli |
+| 22 | **2026 jürisi** açıklandığında isim ve unvanlar | Şu an 2025 jürisi gösteriliyor |
 
 ### Teyit edilmesi gereken mevcut içerik
 
 Aşağıdakiler **basın bültenlerinden** alındı, kurum içi kayıtlarla
 doğrulanmalıdır:
 
-- **2025:** 31 Ekim – 1 Kasım 2025, Teknopark İstanbul Turgut Özal Konferans Salonu.
-  Dereceye girenler: 1. *DASK + Parametrik Sigorta*, 2. *EduTravel*,
+- **2025 etkinliği:** 31 Ekim – 1 Kasım 2025, Teknopark İstanbul Turgut Özal
+  Konferans Salonu, 10 takım.
+- **2025 dereceleri:** 1. *DASK + Parametrik Sigorta*, 2. *EduTravel*,
   3. *Parametrik Sigorta Platformu*.
-- **2024:** ödüller 50.000 / 30.000 / 20.000 TL.
-- Kazananların **Neova MT ve Kampüs programlarında** değerlendirilme fırsatı.
 - **2025 jürisi (6 kişi):** Aslıhan Çandır, Cem Salih Çelen, Sami Kaya,
   Prof. Dr. Fatih Alagöz, Prof. Dr. Selim Yazıcı, Doç. Dr. Hakan Özcan.
+- Kazananların **Neova MT ve Kampüs programlarında** değerlendirilme fırsatı.
 
 > ⚠️ Jüri konusunda dikkat: bazı haber kaynaklarında Uğur Gülen ve Zeynep
 > Türker'in de yer aldığı **farklı** bir jüri listesi geçiyor. O liste,
@@ -98,18 +97,16 @@ doğrulanmalıdır:
 > Sitede yalnızca 2025 jürisi gösteriliyor. Bu ayrım kurum içi kayıtlarla
 > teyit edilmelidir.
 
-> Yanlışsa `index.html #gecmis` ve `#odul` bölümlerinden düzeltilmelidir.
-
 ---
 
 ## 🎨 Marka
 
 | # | Bilgi | Nereye |
 |---|---|---|
-| 26 | **Neova kurumsal renk kodları (kesin hex)** | `assets/css/style.css › :root › --brand-*` |
-| 27 | **Neova / Neovasyon logo dosyası** (SVG) | `assets/img/`, `index.html` header |
-| 28 | **Kurumsal font** (varsa lisanslı dosyalar) | `style.css › --font` |
-| 29 | **Sosyal medya hesapları** | `index.html` footer |
+| 23 | **Neova kurumsal renk kodları (kesin hex)** | `assets/css/style.css › :root › --brand-*` |
+| 24 | **Neova / Neovasyon logo dosyası** (SVG) | `assets/img/`, `index.html` header |
+| 25 | **Kurumsal font** (varsa lisanslı dosyalar) | `style.css › --font` |
+| 26 | **Sosyal medya hesapları** | `index.html` footer |
 
 Şu an kullanılan yeşil paleti Neova'nın yeşil kimliğine göre seçildi ancak
 **marka kılavuzundan birebir alınmadı.** Sadece `:root` bloğundaki
@@ -121,6 +118,6 @@ doğrulanmalıdır:
 
 | # | Konu | Not |
 |---|---|---|
-| 30 | **GA4 / GTM ölçüm kimliği** | Sayfaya gtag/GTM snippet'i eklenmeli; event'ler hazır |
-| 31 | **Backend alan adları** | Formdaki `name`'ler mevcut şemayla eşleşmiyorsa `config.js › application.fieldMap` ile eşlenir |
-| 32 | **Canlı sitedeki mevcut kod** | Depo boş geldi; mevcut kod paylaşılırsa bu sürüm ona göre revize edilir |
+| 27 | **GA4 / GTM ölçüm kimliği** | Sayfaya gtag/GTM snippet'i eklenmeli; event'ler hazır |
+| 28 | **Backend alan adları** | Formdaki `name`'ler mevcut şemayla eşleşmiyorsa `config.js › application.fieldMap` ile eşlenir |
+| 29 | **Canlı sitedeki mevcut kod** | Depo boş geldi; mevcut kod paylaşılırsa bu sürüm ona göre revize edilir |

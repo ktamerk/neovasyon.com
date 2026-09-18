@@ -30,7 +30,7 @@ node tests/e2e.js               # 52 kontrol
 
 ```
 index.html            Ana sayfa (hero → nedir → kimler → ÖDÜL → temalar →
-                      süreç → kriterler → jüri → neden → geçmiş → SSS → CTA)
+                      süreç → kriterler → jüri → 2025 vitrini → SSS → CTA)
 basvuru.html          4 adımlı başvuru formu
 tesekkurler.html      Başvuru sonrası sayfa (noindex)
 kvkk.html             KVKK + şartname  ← metin hukuk ekibinden gelecek
@@ -167,11 +167,26 @@ artırıyor hem de arka arkaya gelen açık renkli bölümleri bölüyor.
 
 ### Kutu yerine balon
 
-Sayfanın tamamı dikdörtgen kart olmasın diye tema ve "neden katılmalısın"
-kartları `.bubble` (asimetrik köşeli, çerçevesiz), jüri `.juror` (daire),
-geçmiş etkinlik rakamları `.stat-bubble` (daire) olarak kurgulandı. Kutu
-görünümü yalnızca yapı gereken yerlerde korundu: form alanları, SSS accordion
-ve değerlendirme kriterleri.
+Sayfanın tamamı dikdörtgen kart olmasın diye tema kartları `.bubble`
+(asimetrik köşeli, çerçevesiz), jüri `.juror` (daire), 2025 künyesi
+`.showcase__meta` (hap) olarak kurgulandı. Kutu görünümü yalnızca yapı
+gereken yerlerde korundu: form alanları, SSS accordion ve değerlendirme
+kriterleri.
+
+### "Ideathon nedir?" neden timeline değil
+
+Bu bölüm etkinliğin **iki gününü** anlatıyor (`.day` panelleri: geliştirme
+günü / sahne günü). `#surec` ise başvurudan ödüle kadarki **süreci**
+anlatıyor. İkisi de timeline olsaydı sayfa kendini tekrar ederdi; bu yüzden
+bilinçli olarak farklı iki görsel dil kullanıldı.
+
+### Kaldırılan bölümler
+
+"Neden katılmalısın?" kart grid'i ve "Rakamlarla Neova Ideathon" sayaçları
+kaldırıldı. Birincisinin içeriği `#nedir` altındaki `.value-strip` şeridine
+(mentor desteği / gerçek problemler / network / teknik bilgi şart değil)
+taşındı, böylece briefteki "etkinliğe katılmaya neden değer?" sorusu hâlâ
+cevaplanıyor. Geçmiş etkinlikler yalnızca 2025 gösteriyor.
 
 ---
 
