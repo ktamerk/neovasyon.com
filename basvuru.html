@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Başvuru Formu | Neova Ideathon 2026</title>
+<meta name="description" content="Neova Ideathon 2026 başvuru formu. 4 adımda tamamla, 6–7 Kasım 2026'da Teknopark İstanbul'da yerini al.">
+<link rel="canonical" href="https://neovasyon.com/basvuru.html">
+<meta name="theme-color" content="#05231b">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Neovasyon">
+<meta property="og:title" content="Başvuru Formu | Neova Ideathon 2026">
+<meta property="og:description" content="Neova Ideathon 2026 başvuru formu. 4 adımda tamamla.">
+<meta property="og:url" content="https://neovasyon.com/basvuru.html">
+<meta property="og:image" content="https://neovasyon.com/assets/img/og-ideathon-2026.jpg">
+
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/form.js" defer></script>
+</head>
+<body class="form-page">
+
+<a class="skip-link" href="#main">İçeriğe geç</a>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="/">Neovasyon <span>IDEATHON 2026</span></a>
+    <a class="btn btn--outline" href="/" style="min-height:42px;padding:.6rem 1.15rem;font-size:.95rem">Ana sayfa</a>
+  </div>
+</header>
+
+<main id="main" class="form-shell">
+
+  <h1 style="font-size:var(--step-3);margin-bottom:.25rem">Neova Ideathon 2026 Başvurusu</h1>
+  <p style="color:var(--ink-500);margin-bottom:1.75rem">
+    4 adım, yaklaşık 10 dakika. Yarıda bırakırsan bilgilerin tarayıcında saklanır.
+  </p>
+
+  <!-- ===== Progress ===== -->
+  <div class="progress">
+    <div class="progress__top">
+      <span class="progress__count"><span id="step-current">1</span> / 4</span>
+      <span class="progress__name" id="step-name">Seni Tanıyalım</span>
+    </div>
+    <div class="progress__bar" role="progressbar" aria-valuemin="1" aria-valuemax="4"
+         aria-valuenow="1" aria-label="Başvuru ilerlemesi" id="progressbar">
+      <div class="progress__fill" id="progress-fill"></div>
+    </div>
+    <ol class="progress__steps" id="progress-steps">
+      <li aria-current="step">Seni Tanıyalım</li>
+      <li>Takım</li>
+      <li>Fikir</li>
+      <li>Son Bilgiler</li>
+    </ol>
+  </div>
+
+  <!-- Ekran okuyucular için adım duyurusu -->
+  <p class="visually-hidden" role="status" aria-live="polite" id="step-announce"></p>
+
+  <!--
+    ÖNEMLİ: Tek bir <form> kullanılıyor. Adımlar sadece görsel olarak
+    gizleniyor/gösteriliyor. Böylece gönderilen payload, mevcut backend'in
+    beklediği tek seferlik gönderimle birebir aynı kalıyor.
+  -->
+  <form id="application-form" novalidate autocomplete="on">
+
+    <!-- =============== ADIM 1 — SENİ TANIYALIM =============== -->
+    <fieldset class="fieldset" id="step-1" data-step="1">
+      <div class="fieldset__inner">
+        <legend>Seni tanıyalım</legend>
+        <p class="fieldset__hint">Sana ulaşabilmemiz için temel bilgilerin.</p>
+
+        <div class="field">
+          <label for="adSoyad">Ad Soyad <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="adSoyad" name="adSoyad" required
+                 autocomplete="name" spellcheck="false"
+                 data-error-required="Lütfen ad ve soyadını yaz."
+                 data-error-pattern="Lütfen hem adını hem soyadını yaz.">
+          <p class="error-msg" id="err-adSoyad"></p>
+        </div>
+
+        <div class="field">
+          <label for="eposta">E-posta <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="eposta" name="eposta" required
+                 autocomplete="email" inputmode="email" spellcheck="false"
+                 placeholder="ornek@eposta.com"
+                 data-error-required="Lütfen e-posta adresini yaz."
+                 data-error-pattern="E-posta adresi geçerli görünmüyor. Örnek: ad@ornek.com">
+          <p class="field__help">Başvuru sonucunu bu adrese göndereceğiz.</p>
+          <p class="error-msg" id="err-eposta"></p>
+        </div>
+
+        <div class="field">
+          <label for="telefon">Telefon <span class="req" aria-hidden="true">*</span></label>
+          <input type="tel" id="telefon" name="telefon" required
+                 autocomplete="tel" inputmode="tel"
+                 placeholder="05XX XXX XX XX"
+                 data-error-required="Lütfen telefon numaranı yaz."
+                 data-error-pattern="Telefon numarası 10 haneli olmalı. Örnek: 0532 123 45 67">
+          <p class="error-msg" id="err-telefon"></p>
+        </div>
+
+        <div class="field">
+          <label for="dogumTarihi">Doğum Tarihi <span class="req" aria-hidden="true">*</span></label>
+          <input type="date" id="dogumTarihi" name="dogumTarihi" required
+                 autocomplete="bday" min="1950-01-01" max="2012-12-31"
+                 data-error-required="Lütfen doğum tarihini seç."
+                 data-error-range="Girdiğin tarih geçerli aralıkta değil.">
+          <p class="error-msg" id="err-dogumTarihi"></p>
+        </div>
+
+        <div class="field">
+          <label for="sehir">Şehir <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="sehir" name="sehir" required
+                 autocomplete="address-level2" placeholder="İstanbul"
+                 data-error-required="Lütfen yaşadığın şehri yaz.">
+          <p class="error-msg" id="err-sehir"></p>
+        </div>
+
+        <div class="field">
+          <label for="universite">Üniversite <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="universite" name="universite" required
+                 autocomplete="organization"
+                 data-error-required="Lütfen üniversiteni yaz.">
+          <p class="error-msg" id="err-universite"></p>
+        </div>
+
+        <div class="field">
+          <label for="bolum">Bölüm <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="bolum" name="bolum" required
+                 data-error-required="Lütfen bölümünü yaz.">
+          <p class="error-msg" id="err-bolum"></p>
+        </div>
+
+        <div class="field">
+          <label for="egitimDurumu">Eğitim durumu <span class="req" aria-hidden="true">*</span></label>
+          <select id="egitimDurumu" name="egitimDurumu" required
+                  data-error-required="Lütfen eğitim durumunu seç.">
+            <option value="">Seçiniz…</option>
+            <option value="on-lisans">Ön lisans öğrencisi</option>
+            <option value="lisans-1">Lisans – 1. sınıf</option>
+            <option value="lisans-2">Lisans – 2. sınıf</option>
+            <option value="lisans-3">Lisans – 3. sınıf</option>
+            <option value="lisans-4">Lisans – 4. sınıf ve üzeri</option>
+            <option value="yuksek-lisans">Yüksek lisans</option>
+            <option value="doktora">Doktora</option>
+            <option value="yeni-mezun">Yeni mezun</option>
+          </select>
+          <p class="error-msg" id="err-egitimDurumu"></p>
+        </div>
+      </div>
+
+      <div class="fieldset__inner" style="padding-top:0">
+        <div class="form-nav">
+          <span class="form-nav__spacer"></span>
+          <button type="button" class="btn btn--primary" data-next>Devam et →</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- =============== ADIM 2 — TAKIM =============== -->
+    <fieldset class="fieldset" id="step-2" data-step="2" hidden>
+      <div class="fieldset__inner">
+        <legend>Takım</legend>
+        <p class="fieldset__hint">Tek başına da başvurabilirsin — takım zorunlu değil.</p>
+
+        <div class="field">
+          <span class="label" id="lbl-katilimTuru">Nasıl başvuruyorsun? <span class="req" aria-hidden="true">*</span></span>
+          <div class="choice-grid" role="radiogroup" aria-labelledby="lbl-katilimTuru">
+            <label class="choice">
+              <input type="radio" name="katilimTuru" value="bireysel" required
+                     data-error-required="Lütfen bireysel mi takım olarak mı başvurduğunu seç.">
+              <span><strong>Bireysel</strong><span>Tek başıma başvuruyorum</span></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="katilimTuru" value="takim">
+              <span><strong>Takım</strong><span>Takımımla başvuruyorum</span></span>
+            </label>
+          </div>
+          <p class="error-msg" id="err-katilimTuru"></p>
+        </div>
+
+        <div id="team-section" hidden>
+          <div class="field">
+            <label for="takimAdi">Takım adı <span class="opt">(opsiyonel)</span></label>
+            <input type="text" id="takimAdi" name="takimAdi">
+          </div>
+
+          <p class="label" style="margin-bottom:.5rem">Takım üyeleri</p>
+          <p class="field__help" style="margin-top:0;margin-bottom:.75rem">
+            Kendini eklemene gerek yok — 1. adımdaki bilgilerin takım lideri olarak kaydedilir.
+            Takımın alabileceği maksimum kişi sayısı:
+            <span class="todo">TODO: İçerik gerekli</span>
+          </p>
+
+          <div id="members"></div>
+
+          <button type="button" class="btn btn--outline" id="add-member"
+                  style="min-height:44px;padding:.6rem 1.2rem;font-size:.95rem">
+            + Takım üyesi ekle
+          </button>
+          <p class="error-msg" id="err-members"></p>
+        </div>
+      </div>
+
+      <div class="fieldset__inner" style="padding-top:0">
+        <div class="form-nav">
+          <button type="button" class="btn btn--outline" data-prev>← Geri</button>
+          <span class="form-nav__spacer"></span>
+          <button type="button" class="btn btn--primary" data-next>Devam et →</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- =============== ADIM 3 — FİKİR =============== -->
+    <fieldset class="fieldset" id="step-3" data-step="3" hidden>
+      <div class="fieldset__inner">
+        <legend>Fikrin</legend>
+        <p class="fieldset__hint">
+          Mükemmel olmak zorunda değil. Net anlatılmış bir fikir, cilalı bir fikirden
+          daha değerlidir.
+        </p>
+
+        <div class="field">
+          <label for="fikirAdi">Fikir adı <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="fikirAdi" name="fikirAdi" required maxlength="80"
+                 placeholder="Fikrini bir isimle özetle"
+                 data-error-required="Lütfen fikrine bir isim ver.">
+          <p class="error-msg" id="err-fikirAdi"></p>
+        </div>
+
+        <div class="field">
+          <label for="fikirOzeti">Fikir özeti <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="fikirOzeti" name="fikirOzeti" required
+                    maxlength="500" data-counter="500"
+                    placeholder="Fikrini birkaç cümleyle anlat."
+                    data-error-required="Lütfen fikrini kısaca özetle."
+                    data-error-minlength="Biraz daha ayrıntı verir misin? (en az 40 karakter)"
+                    minlength="40"></textarea>
+          <p class="counter" data-counter-for="fikirOzeti">0 / 500</p>
+          <p class="error-msg" id="err-fikirOzeti"></p>
+        </div>
+
+        <div class="field">
+          <label for="problem">Hangi problemi çözüyor? <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="problem" name="problem" required
+                    maxlength="800" data-counter="800" minlength="40"
+                    placeholder="Kimin, hangi sorununu çözüyorsun?"
+                    data-error-required="Lütfen çözdüğün problemi anlat."
+                    data-error-minlength="Problemi biraz daha açar mısın? (en az 40 karakter)"></textarea>
+          <p class="counter" data-counter-for="problem">0 / 800</p>
+          <p class="error-msg" id="err-problem"></p>
+        </div>
+
+        <div class="field">
+          <label for="cozum">Önerilen çözüm <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="cozum" name="cozum" required
+                    maxlength="800" data-counter="800" minlength="40"
+                    placeholder="Çözümün nasıl çalışıyor?"
+                    data-error-required="Lütfen önerdiğin çözümü anlat."
+                    data-error-minlength="Çözümü biraz daha açar mısın? (en az 40 karakter)"></textarea>
+          <p class="counter" data-counter-for="cozum">0 / 800</p>
+          <p class="error-msg" id="err-cozum"></p>
+        </div>
+
+        <div class="field">
+          <label for="temaAlani">İlgili problem alanı <span class="opt">(opsiyonel)</span></label>
+          <select id="temaAlani" name="temaAlani">
+            <option value="">Seçiniz…</option>
+            <option>Yapay Zekâ</option>
+            <option>Yeni Nesil Sigorta Ürünleri</option>
+            <option>Müşteri Deneyimi</option>
+            <option>Hasar ve Risk Yönetimi</option>
+            <option>Dijital Dağıtım Kanalları</option>
+            <option>Sürdürülebilirlik</option>
+            <option>Veri ve Analitik</option>
+            <option>Serbest Alan</option>
+          </select>
+          <p class="field__help">Fikrin bu başlıklarla sınırlı olmak zorunda değil.</p>
+        </div>
+
+        <div class="field">
+          <label for="deneyim">Bu konudaki deneyimin <span class="opt">(opsiyonel)</span></label>
+          <textarea id="deneyim" name="deneyim" maxlength="600" data-counter="600"
+                    placeholder="Daha önce benzer bir proje, staj veya çalışma yaptıysan yaz."></textarea>
+          <p class="counter" data-counter-for="deneyim">0 / 600</p>
+        </div>
+      </div>
+
+      <div class="fieldset__inner" style="padding-top:0">
+        <div class="form-nav">
+          <button type="button" class="btn btn--outline" data-prev>← Geri</button>
+          <span class="form-nav__spacer"></span>
+          <button type="button" class="btn btn--primary" data-next>Devam et →</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- =============== ADIM 4 — SON BİLGİLER =============== -->
+    <fieldset class="fieldset" id="step-4" data-step="4" hidden>
+      <div class="fieldset__inner">
+        <legend>Son bilgiler</legend>
+        <p class="fieldset__hint">Son birkaç soru ve başvurun tamamlanıyor.</p>
+
+        <div class="field">
+          <label for="ideathonDeneyimi">Daha önce bir Ideathon'a katıldın mı? <span class="req" aria-hidden="true">*</span></label>
+          <select id="ideathonDeneyimi" name="ideathonDeneyimi" required
+                  data-error-required="Lütfen bir seçenek seç.">
+            <option value="">Seçiniz…</option>
+            <option value="hayir">Hayır, ilk kez katılıyorum</option>
+            <option value="evet-neova">Evet, daha önce Neova Ideathon'a katıldım</option>
+            <option value="evet-diger">Evet, başka bir Ideathon/Hackathon'a katıldım</option>
+          </select>
+          <p class="error-msg" id="err-ideathonDeneyimi"></p>
+        </div>
+
+        <div class="field">
+          <label for="nereden">Neova Ideathon'u nereden duydun? <span class="req" aria-hidden="true">*</span></label>
+          <select id="nereden" name="nereden" required
+                  data-error-required="Lütfen bir seçenek seç.">
+            <option value="">Seçiniz…</option>
+            <option value="instagram">Instagram</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="x">X (Twitter)</option>
+            <option value="universite">Üniversitem / kulübüm</option>
+            <option value="arkadas">Arkadaşım</option>
+            <option value="kariyer-sitesi">Kariyer sitesi</option>
+            <option value="arama">Google / arama motoru</option>
+            <option value="diger">Diğer</option>
+          </select>
+          <p class="error-msg" id="err-nereden"></p>
+        </div>
+
+        <!--
+          KVKK / AÇIK RIZA
+          !!! Aşağıdaki metinler PLACEHOLDER'dır. Hukuk ekibinin onayladığı
+          resmî aydınlatma ve açık rıza metinleri ile değiştirilmelidir.
+          Metin uydurulmamış, TODO olarak işaretlenmiştir.
+        -->
+        <div class="field">
+          <span class="label">İzinler <span class="req" aria-hidden="true">*</span></span>
+          <div class="consents">
+            <label class="choice">
+              <input type="checkbox" name="kvkkOnay" value="1" required
+                     data-error-required="Başvuruyu tamamlamak için aydınlatma metnini onaylaman gerekiyor.">
+              <span>
+                <a href="/kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni
+                okudum ve anladım. <span class="todo">TODO: Resmî metin gerekli</span>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="acikRiza" value="1" required
+                     data-error-required="Başvuruyu tamamlamak için açık rıza onayı gerekiyor.">
+              <span>
+                Başvuru değerlendirme süreci kapsamında kişisel verilerimin işlenmesine
+                açık rıza veriyorum. <span class="todo">TODO: Resmî metin gerekli</span>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="sartnameOnay" value="1" required
+                     data-error-required="Yarışma şartnamesini onaylaman gerekiyor.">
+              <span>
+                Yarışma şartnamesini okudum, kabul ediyorum.
+                <span class="todo">TODO: Şartname metni gerekli</span>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="iletisimIzni" value="1">
+              <span>
+                Neova'nın etkinlik ve kariyer fırsatlarıyla ilgili bana e-posta / SMS
+                göndermesine izin veriyorum. <span class="opt">(opsiyonel)</span>
+              </span>
+            </label>
+          </div>
+          <p class="error-msg" id="err-consents"></p>
+        </div>
+
+        <!-- Basit bot tuzağı (honeypot) — kullanıcıya görünmez -->
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="website">Bu alanı boş bırakın</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="fieldset__inner" style="padding-top:0">
+        <div class="form-nav">
+          <button type="button" class="btn btn--outline" data-prev>← Geri</button>
+          <span class="form-nav__spacer"></span>
+          <button type="submit" class="btn btn--primary btn--lg" id="submit-btn">Başvurumu gönder</button>
+        </div>
+        <div class="form-status" id="form-status" role="alert"></div>
+      </div>
+    </fieldset>
+
+    <p class="draft-note">
+      <span aria-hidden="true">💾</span>
+      Girdiğin bilgiler tarayıcında otomatik saklanır; sayfayı kapatsan bile kaybolmaz.
+      <button type="button" id="clear-draft"
+              style="background:none;border:0;color:var(--brand-600);text-decoration:underline;cursor:pointer;padding:.25rem;font-size:inherit">
+        Formu temizle
+      </button>
+    </p>
+  </form>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <span id="year">2026</span> Neova Katılım Sigorta</span>
+      <span><a href="/">neovasyon.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

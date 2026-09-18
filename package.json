@@ -1,0 +1,13 @@
+{
+  "name": "neovasyon.com",
+  "version": "2026.1.0",
+  "private": true,
+  "description": "Neovasyon.com – Neova Ideathon 2026 etkinlik ve başvuru sitesi",
+  "scripts": {
+    "start": "python3 -m http.server 8765",
+    "test": "node tests/e2e.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

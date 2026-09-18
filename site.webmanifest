@@ -1,0 +1,13 @@
+{
+  "name": "Neova Ideathon 2026",
+  "short_name": "Ideathon 2026",
+  "description": "Neova Ideathon 2026 – 6–7 Kasım 2026, Teknopark İstanbul",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#05231b",
+  "lang": "tr",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

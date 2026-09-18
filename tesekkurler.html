@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Başvurun Alındı | Neova Ideathon 2026</title>
+<meta name="description" content="Neova Ideathon 2026 başvurun bize ulaştı. Sonraki adımları buradan takip edebilirsin.">
+<link rel="canonical" href="https://neovasyon.com/tesekkurler.html">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#05231b">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body class="form-page">
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="/">Neovasyon <span>IDEATHON 2026</span></a>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="thanks">
+    <div class="thanks__mark" aria-hidden="true">✓</div>
+    <h1 style="font-size:var(--step-3)">Başvurun bize ulaştı</h1>
+    <p style="font-size:var(--step-1);color:var(--ink-500)">
+      Neova Ideathon 2026'ya başvurduğun için teşekkürler. Başvurunu
+      değerlendirme kriterlerimize göre inceleyeceğiz.
+    </p>
+
+    <div class="card" style="text-align:left;margin-top:1.75rem">
+      <h2 style="font-size:var(--step-1)">Sırada ne var?</h2>
+      <ol style="padding-left:1.15em;color:var(--ink-500)">
+        <li>Başvurular ön değerlendirmeden geçer.</li>
+        <li>
+          Finalistler e-posta ile bilgilendirilir.
+          <strong data-cfg="application.finalistsAnnounceLabel"></strong>
+        </li>
+        <li>Finalistler için eğitim ve mentorluk süreci başlar.</li>
+        <li>
+          Etkinlik: <strong data-cfg="event.datesLabel">6–7 Kasım 2026</strong>,
+          <span data-cfg="event.venueName">Turgut Özal Etkinlik Merkezi</span> –
+          <span data-cfg="event.venueArea">Teknopark İstanbul</span>.
+        </li>
+      </ol>
+      <p class="card__note">
+        E-postalarımızın spam klasörüne düşmediğinden emin ol.
+      </p>
+    </div>
+
+    <p style="margin-top:1.75rem">
+      <a class="btn btn--primary" href="/">Ana sayfaya dön</a>
+    </p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <span id="year">2026</span> Neova Katılım Sigorta</span>
+      <span><a href="/">neovasyon.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  /* Funnel sonu doğrulaması — form.js zaten application_completed gönderiyor.
+     Bu sayfa doğrudan açılırsa (ör. yenileme) tekrar sayılmasın diye
+     ayrı bir sayfa görüntüleme event'i gönderiyoruz. */
+  if (window.neoTrack) window.neoTrack('application_thankyou_view', {});
+</script>
+</body>
+</html>
